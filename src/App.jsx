@@ -3,10 +3,10 @@ import React from 'react'
 export default function App() {
   const [count, setCount] = React.useState(0)
   function decrease() {
-    setCount(count - 1)
+    setCount(prevCount => prevCount - 1)
   }
   function increase() {
-    setCount(count + 1)
+    setCount(prevCount => prevCount + 1)
   }
   return (
     <div className='app-div'>
